@@ -2,7 +2,10 @@ body {
   background-color: #EDC79B;
   height: 1400px;
 }
-
+img{
+  max-width: 20%;
+  float:right;
+}
 h1 {
   font-size: 3rem;
   position: relative;
