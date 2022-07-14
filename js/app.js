@@ -98,21 +98,21 @@ let attempts = 4;
 while(attempts){
   let guess = prompt('What number am I thinking off. ( Hint, its between 0 and 25)');
   attempts--;
-  console.log(`You have ${attempts} attemps remaining!`);
+  alert(`You have ${attempts} attemps remaining!`);
   if(guess === secret){
-    console.log('You got it right!');
+    alert('You got it right!');
     attempts = 0;
     num++;
   }else if(guess > secret){
-    console.log('Your guess was a little too high');
+    alert('Your guess was a little too high');
   }else if(guess < secret){
-    console.log('You guess was a little too low!');
+    alert('You guess was a little too low!');
   }
   else {
-    console.log('Please put in a number!');
+    alert('Please put in a number!');
   }
   if(attempts === 0){
-    console.log(`All out of guesses, it should have been ${secret}!`);
+    alert(`All out of guesses, it should have been ${secret}!`);
   }
 }
 
@@ -125,21 +125,21 @@ while(guesses){
   guesses--;
   for(let i = 0; i < myPets.length; i++){
     if(userResponse === myPets[i]){
-      console.log('You guesed correctly!');
+      alert('You guesed correctly!');
       alert( `You guessed correctly, I do have a pet named ${userResponse}`);
       guesses=0;
       num++;
       alert(`Here is the rest of my pets names ${myPets}`);
     }
     else if(i === myPets.length){
-      console.log('That was not any of my pets names, try again!');
+      alert('That was not any of my pets names, try again!');
     }
   }
   if(guesses === 0 && num === gotitRight){
-    console.log('You ran out of guesses!');
+    alert('You ran out of guesses!');
     alert(`Here is the rest of my pets names ${myPets}`);
   }
-  console.log(`You have ${guesses} attempts remaining!`);
+  alert(`You have ${guesses} attempts remaining!`);
 }
 
 alert('Alright '+username+' lets see how you did!');
