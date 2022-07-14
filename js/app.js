@@ -67,20 +67,23 @@ function func3() {
 }
 func3();
 
-let glasses = prompt('Does jackso wear glasses?').toLowerCase();
-if (glasses === 'yes' || glasses === 'y') {
-  //console.log('Correct I am a nerd');
-  alert('Correct I am a nerd');
-  num++;
+function func4() {
+  let glasses = prompt('Does jackso wear glasses?').toLowerCase();
+  if (glasses === 'yes' || glasses === 'y') {
+    //console.log('Correct I am a nerd');
+    alert('Correct I am a nerd');
+    num++;
+  }
+  else if (glasses === 'no' || glasses === 'n') {
+    //console.log('You are so wrong I am blind as hell boi');
+    alert('You are so wrong I am blind as hell boi');
+  }
+  else {
+    alert('Please take this quiz srs, or i will execute this connection');
+    //console.log('Please take this quiz srs, or i will execute this connection');
+  }
 }
-else if (glasses === 'no' || glasses === 'n') {
-  //console.log('You are so wrong I am blind as hell boi');
-  alert('You are so wrong I am blind as hell boi');
-}
-else {
-  alert('Please take this quiz srs, or i will execute this connection');
-  //console.log('Please take this quiz srs, or i will execute this connection');
-}
+func4();
 
 let hair = prompt('What color hair do I have? is it brown?(Y/n)').toLowerCase();
 if (hair === 'yes' || hair === 'y') {
