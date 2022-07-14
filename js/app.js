@@ -107,32 +107,32 @@ function func5() {
 }
 func5();
 
-
-
-let secret = 20;
-let attempts = 4;
-while (attempts) {
-  let input1 = prompt('What number am I thinking off. ( Hint, its between 0 and 25)');
-  let guess = parseInt(input1);
-  attempts--;
-  alert(`You have ${attempts} attemps remaining!`);
-  if (guess === secret) {
-    alert('You got it right!');
-    num++;
-    break;
-  } else if (guess > secret) {
-    alert('Your guess was a little too high');
-  } else if (guess < secret) {
-    alert('You guess was a little too low!');
-  }
-  else {
-    alert('Please put in a number!');
-  }
-  if (attempts === 0) {
-    alert(`All out of guesses, it should have been ${secret}!`);
+function func6() {
+  let secret = 20;
+  let attempts = 4;
+  while (attempts) {
+    let input1 = prompt('What number am I thinking off. ( Hint, its between 0 and 25)');
+    let guess = parseInt(input1);
+    attempts--;
+    alert(`You have ${attempts} attemps remaining!`);
+    if (guess === secret) {
+      alert('You got it right!');
+      num++;
+      break;
+    } else if (guess > secret) {
+      alert('Your guess was a little too high');
+    } else if (guess < secret) {
+      alert('You guess was a little too low!');
+    }
+    else {
+      alert('Please put in a number!');
+    }
+    if (attempts === 0) {
+      alert(`All out of guesses, it should have been ${secret}!`);
+    }
   }
 }
-
+func6();
 alert('Time to play the pet guessing game!');
 let myPets = ['Hugo', 'Indy', 'Lily', 'Hazelnut', 'Olive'];
 let guesses = 6;
