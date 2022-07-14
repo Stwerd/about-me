@@ -49,20 +49,23 @@ function func2() {
 }
 func2();
 
-let raccoon = prompt('Is there a raccoon in my backyard I feed fried bread?').toLowerCase();
-if (raccoon === 'yes' || raccoon === 'y') {
-  //console.log('I wish :( I dont have any pets with thumbs');
-  alert('I wish :( I dont have any pets with thumbs');
+function func3() {
+  let raccoon = prompt('Is there a raccoon in my backyard I feed fried bread?').toLowerCase();
+  if (raccoon === 'yes' || raccoon === 'y') {
+    //console.log('I wish :( I dont have any pets with thumbs');
+    alert('I wish :( I dont have any pets with thumbs');
+  }
+  else if (raccoon === 'no' || raccoon === 'n') {
+    //console.log('You are right i dont have any raccoon pets sadly ;(');
+    alert('You are right i dont have any raccoon pets sadly ;(');
+    num++;
+  }
+  else {
+    //console.log('if u hate raccoons just say it bastard');
+    alert('if u hate raccoons just say it bastard');
+  }
 }
-else if (raccoon === 'no' || raccoon === 'n') {
-  //console.log('You are right i dont have any raccoon pets sadly ;(');
-  alert('You are right i dont have any raccoon pets sadly ;(');
-  num++;
-}
-else {
-  //console.log('if u hate raccoons just say it bastard');
-  alert('if u hate raccoons just say it bastard');
-}
+func3();
 
 let glasses = prompt('Does jackso wear glasses?').toLowerCase();
 if (glasses === 'yes' || glasses === 'y') {
