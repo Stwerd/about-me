@@ -93,16 +93,17 @@ else{
 }
 
 
-let secret =Math.floor(Math.random() * 25);
+let secret = 20;
 let attempts = 4;
 while(attempts){
-  let guess = prompt('What number am I thinking off. ( Hint, its between 0 and 25)');
+  let input1 = prompt('What number am I thinking off. ( Hint, its between 0 and 25)');
+  let guess = parseInt(input1);
   attempts--;
   alert(`You have ${attempts} attemps remaining!`);
   if(guess === secret){
     alert('You got it right!');
-    attempts = 0;
     num++;
+    break;
   }else if(guess > secret){
     alert('Your guess was a little too high');
   }else if(guess < secret){
@@ -127,9 +128,10 @@ while(guesses){
   for(let i = 0; i < myPets.length; i++){
     if(userResponse === myPets[i]){
       alert( `You guessed correctly, I do have a pet named ${userResponse}`);
-      guesses=0;
       num++;
       alert(`Here is the rest of my pets names ${myPets}`);
+      guesses = 0;
+      break;
     }
     else if(i === myPets.length){
       alert('That was not any of my pets names, try again!');
@@ -143,10 +145,10 @@ while(guesses){
 
 alert('Alright '+username+' lets see how you did!');
 if(num >= 5){
-  alert('Wow ' + username + 'You know me pretty well, or youre a good guesser!');
+  alert('Wow ' + username + num + ' out of 7. You know me pretty well, or youre a good guesser!');
 }
 else if(num === 3 || num === 4){
-  alert('You aren\'t that good a guessing huh '+ username);
+  alert(num +'out of 7. You aren\'tthat good a guessing huh '+ username);
 }
 else{
   alert('Yikes maybe refresh this page and try again bub.');
