@@ -134,30 +134,34 @@ function func6() {
 }
 func6();
 alert('Time to play the pet guessing game!');
-let myPets = ['Hugo', 'Indy', 'Lily', 'Hazelnut', 'Olive'];
-let guesses = 6;
-let gotitRight = num;
-while (guesses) {
-  alert(`You have ${guesses} attempts remaining!`);
-  let userResponse = prompt('What is one name that belongs to one of my pets?');
-  guesses--;
-  for (let i = 0; i < myPets.length; i++) {
-    if (userResponse === myPets[i]) {
-      alert(`You guessed correctly, I do have a pet named ${userResponse}`);
-      num++;
+
+function func7() {
+  let myPets = ['Hugo', 'Indy', 'Lily', 'Hazelnut', 'Olive'];
+  let guesses = 6;
+  let gotitRight = num;
+  while (guesses) {
+    alert(`You have ${guesses} attempts remaining!`);
+    let userResponse = prompt('What is one name that belongs to one of my pets?');
+    guesses--;
+    for (let i = 0; i < myPets.length; i++) {
+      if (userResponse === myPets[i]) {
+        alert(`You guessed correctly, I do have a pet named ${userResponse}`);
+        num++;
+        alert(`Here is the rest of my pets names ${myPets}`);
+        guesses = 0;
+        break;
+      }
+      else if (i === myPets.length) {
+        alert('That was not any of my pets names, try again!');
+      }
+    }
+    if (guesses === 0 && gotitRight === num) {
+      alert('You ran out of guesses!');
       alert(`Here is the rest of my pets names ${myPets}`);
-      guesses = 0;
-      break;
     }
-    else if (i === myPets.length) {
-      alert('That was not any of my pets names, try again!');
-    }
-  }
-  if (guesses === 0 && gotitRight === num) {
-    alert('You ran out of guesses!');
-    alert(`Here is the rest of my pets names ${myPets}`);
   }
 }
+func7();
 
 alert('Alright ' + username + ' lets see how you did!');
 if (num >= 5) {
