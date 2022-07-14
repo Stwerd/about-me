@@ -121,11 +121,11 @@ let myPets = ['Hugo', 'Indy', 'Lily', 'Hazelnut', 'Olive'];
 let guesses = 6;
 let gotitRight=num;
 while(guesses){
+  alert(`You have ${guesses} attempts remaining!`);
   let userResponse = prompt('What is one name that belongs to one of my pets?');
   guesses--;
   for(let i = 0; i < myPets.length; i++){
     if(userResponse === myPets[i]){
-      alert('You guesed correctly!');
       alert( `You guessed correctly, I do have a pet named ${userResponse}`);
       guesses=0;
       num++;
@@ -135,11 +135,10 @@ while(guesses){
       alert('That was not any of my pets names, try again!');
     }
   }
-  if(guesses === 0 && num === gotitRight){
+  if(guesses === 0 && gotitRight === num){
     alert('You ran out of guesses!');
     alert(`Here is the rest of my pets names ${myPets}`);
   }
-  alert(`You have ${guesses} attempts remaining!`);
 }
 
 alert('Alright '+username+' lets see how you did!');
