@@ -1,53 +1,63 @@
-body{
+body {
   background-color: #EDC79B;
-  height:1400px;
+  height: 1400px;
 }
-h1{
-  font-size:3rem;
-  position:relative;
+
+h1 {
+  font-size: 3rem;
+  position: relative;
 }
-footer{
-  bottom:0;
-  width:100%;
-  position:fixed;
+
+footer {
+  bottom: 0;
+  width: 100%;
+  position: fixed;
 }
-h2{
-  font-size:3rem;
+
+h2 {
+  font-size: 3rem;
   font-weight: 700;
 }
-#Fav{
+
+#Fav {
   padding: 30px;
   text-align: center;
-  font-size:40px;
-  color:#713E5A;
-  background-color:#63A375;
+  font-size: 40px;
+  color: #713E5A;
+  background-color: #63A375;
 }
-h3{
+
+h3 {
   font-size: 20px;
   font-weight: 800;
 }
-.Bio{
-  width:1000px;
-  height:600px;
+
+.Bio {
+  width: 1000px;
+  height: 600px;
 
 }
-.row{
-  height:33%;
-  width:100%;
+
+.row {
+  height: 33%;
+  width: 100%;
   text-align: center;
 }
-.row ul{
-  width:48%;
-  display:inline-block;
+
+.row ul {
+  width: 48%;
+  display: inline-block;
   font-weight: 700;
 }
-.row div{
-  width:48%;
-  display:inline-block;
+
+.row div {
+  width: 48%;
+  display: inline-block;
   font-weight: 700;
 }
-.row div:first-child{
+
+.row div:first-child {
   font-weight: 700;
-  font-size:50px;
+  font-size: 50px;
   flex: auto;
 }
