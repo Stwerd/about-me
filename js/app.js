@@ -3,7 +3,7 @@
 /*
 = assigns a value
 === checks for a value
-&& the logical or
+&& the logical and
 allows me to list two conditionals and both have to be true to run
 || the logical or
 allows me to list two conditionals and either or have to be true to run
@@ -28,7 +28,7 @@ else{
   //console.log('You need to answer a \'yes\' or a \'no\'');
 }
 
-let Dogname = prompt('Is my dogs name Hugo?').toLowerCase;
+let Dogname = prompt('Is my dogs name Hugo?').toLowerCase();
 if(Dogname === 'yes' || Dogname === 'y'){
   //console.log('You are right I do have a cute doxie named Hugo');
   alert('You are right I do have a cute doxie named Hugo');
@@ -92,11 +92,61 @@ else{
   alert('Thats it, we are done');
 }
 
+
+let secret =Math.floor(Math.random() * 25);
+let attempts = 4;
+while(attempts){
+  let guess = prompt('What number am I thinking off. ( Hint, its between 0 and 25)');
+  attempts--;
+  console.log(`You have ${attempts} attemps remaining!`);
+  if(guess === secret){
+    console.log('You got it right!');
+    attempts = 0;
+    num++;
+  }else if(guess > secret){
+    console.log('Your guess was a little too high');
+  }else if(guess < secret){
+    console.log('You guess was a little too low!');
+  }
+  else {
+    console.log('Please put in a number!');
+  }
+  if(attempts === 0){
+    console.log(`All out of guesses, it should have been ${secret}!`);
+  }
+}
+
+alert('Time to play the pet guessing game!');
+let myPets = ['Hugo', 'Indy', 'Lily', 'Hazelnut', 'Olive'];
+let guesses = 6;
+let gotitRight=num;
+while(guesses){
+  let userResponse = prompt('What is one name that belongs to one of my pets?');
+  guesses--;
+  for(let i = 0; i < myPets.length; i++){
+    if(userResponse === myPets[i]){
+      console.log('You guesed correctly!');
+      alert( `You guessed correctly, I do have a pet named ${userResponse}`);
+      guesses=0;
+      num++;
+      alert(`Here is the rest of my pets names ${myPets}`);
+    }
+    else if(i === myPets.length){
+      console.log('That was not any of my pets names, try again!');
+    }
+  }
+  if(guesses === 0 && num === gotitRight){
+    console.log('You ran out of guesses!');
+    alert(`Here is the rest of my pets names ${myPets}`);
+  }
+  console.log(`You have ${guesses} attempts remaining!`);
+}
+
 alert('Alright '+username+' lets see how you did!');
-if(num >= 4){
+if(num >= 5){
   alert('Wow ' + username + 'You know me pretty well, or youre a good guesser!');
 }
-else if(num === 2 || num === 3){
+else if(num === 3 || num === 4){
   alert('You aren\'t that good a guessing huh '+ username);
 }
 else{
