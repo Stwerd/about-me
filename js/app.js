@@ -85,24 +85,28 @@ function func4() {
 }
 func4();
 
-let hair = prompt('What color hair do I have? is it brown?(Y/n)').toLowerCase();
-if (hair === 'yes' || hair === 'y') {
-  //console.log('Thats right my hair is the colour brown!');
-  alert('Thats right my hair is the colour brown!');
-  num++;
+function func5() {
+  let hair = prompt('What color hair do I have? is it brown?(Y/n)').toLowerCase();
+  if (hair === 'yes' || hair === 'y') {
+    //console.log('Thats right my hair is the colour brown!');
+    alert('Thats right my hair is the colour brown!');
+    num++;
+  }
+  else if (hair === 'no' || hair === 'n') {
+    alert('No silly, my hairs the colour brown!');
+    //console.log('No silly, my hairs the colour brown!');
+  }
+  else if (hair === 'blond') {
+    //console.log('Its not blond, its brown wow!');
+    alert('Its not blond, its brown wow!');
+  }
+  else {
+    //console.log('Thats it, we are done');
+    alert('Thats it, we are done');
+  }
 }
-else if (hair === 'no' || hair === 'n') {
-  alert('No silly, my hairs the colour brown!');
-  //console.log('No silly, my hairs the colour brown!');
-}
-else if (hair === 'blond') {
-  //console.log('Its not blond, its brown wow!');
-  alert('Its not blond, its brown wow!');
-}
-else {
-  //console.log('Thats it, we are done');
-  alert('Thats it, we are done');
-}
+func5();
+
 
 
 let secret = 20;
