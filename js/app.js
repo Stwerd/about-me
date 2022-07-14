@@ -31,20 +31,23 @@ function func1() {
 }
 func1();
 
-let Dogname = prompt('Is my dogs name Hugo?').toLowerCase();
-if (Dogname === 'yes' || Dogname === 'y') {
-  //console.log('You are right I do have a cute doxie named Hugo');
-  alert('You are right I do have a cute doxie named Hugo');
-  num++;
+function func2() {
+  let Dogname = prompt('Is my dogs name Hugo?').toLowerCase();
+  if (Dogname === 'yes' || Dogname === 'y') {
+    //console.log('You are right I do have a cute doxie named Hugo');
+    alert('You are right I do have a cute doxie named Hugo');
+    num++;
+  }
+  else if (Dogname === 'no' || Dogname === 'n') {
+    alert('Its like u dont even know me :(');
+    //console.log('Its like u dont even know me :(');
+  }
+  else {
+    //console.log('Please take this quiz srs, it will be on the final exam');
+    alert('Please take this quiz srs, it will be on the final exam');
+  }
 }
-else if (Dogname === 'no' || Dogname === 'n') {
-  alert('Its like u dont even know me :(');
-  //console.log('Its like u dont even know me :(');
-}
-else {
-  //console.log('Please take this quiz srs, it will be on the final exam');
-  alert('Please take this quiz srs, it will be on the final exam');
-}
+func2();
 
 let raccoon = prompt('Is there a raccoon in my backyard I feed fried bread?').toLowerCase();
 if (raccoon === 'yes' || raccoon === 'y') {
