@@ -1,122 +1,23 @@
 'use strict';
 
-/*
-= assigns a value
-=== checks for a value
-&& the logical and
-allows me to list two conditionals and both have to be true to run
-|| the logical or
-allows me to list two conditionals and either or have to be true to run
-! the logical not, often called ("Bang") reverses a true to a false
-*/
 let num = 0;
 let username = prompt('Welcome to Jackson\'s Website! First things first, what is your name?');
 alert('Well howdy ' + username + ', welcome to my quiz!');
 alert('Lets take the Jackson quiz to find out how well you can commit idenity fraud on me!');
 
-//Got rid of the 5 prompts, reduced it down to a loop of questions donwn below!
-// function func1() {
-//   let livesInSeattle = prompt('Do I live in Seattle?').toLowerCase();
-//   if (livesInSeattle === 'yes' || livesInSeattle === 'y') {
-//     //console.log('Yes I do Live in Seattle');
-//     alert('Yes I do Live in Seattle');
-//     num++;
-//   } else if (livesInSeattle === 'no' || livesInSeattle === 'n') {
-//     //console.log('Sorry you are wrong I do live in Seattle');
-//     alert('Sorry you are wrong I do live in Seattle');
-//   }
-//   else {
-//     alert('You need to answer a \'yes\' or a \'no\'');
-//     //console.log('You need to answer a \'yes\' or a \'no\'');
-//   }
-// }
-
-// function func2() {
-//   let Dogname = prompt('Is my dogs name Hugo?').toLowerCase();
-//   if (Dogname === 'yes' || Dogname === 'y') {
-//     //console.log('You are right I do have a cute doxie named Hugo');
-//     alert('You are right I do have a cute doxie named Hugo');
-//     num++;
-//   }
-//   else if (Dogname === 'no' || Dogname === 'n') {
-//     alert('Its like u dont even know me :(');
-//     //console.log('Its like u dont even know me :(');
-//   }
-//   else {
-//     //console.log('Please take this quiz srs, it will be on the final exam');
-//     alert('Please take this quiz srs, it will be on the final exam');
-//   }
-// }
-
-// function func3() {
-//   let raccoon = prompt('Is there a raccoon in my backyard I feed fried bread?').toLowerCase();
-//   if (raccoon === 'yes' || raccoon === 'y') {
-//     //console.log('I wish :( I dont have any pets with thumbs');
-//     alert('I wish :( I dont have any pets with thumbs');
-//   }
-//   else if (raccoon === 'no' || raccoon === 'n') {
-//     //console.log('You are right i dont have any raccoon pets sadly ;(');
-//     alert('You are right i dont have any raccoon pets sadly ;(');
-//     num++;
-//   }
-//   else {
-//     //console.log('if u hate raccoons just say it bastard');
-//     alert('if u hate raccoons just say it bastard');
-//   }
-// }
-
-// function func4() {
-//   let glasses = prompt('Does jackson wear glasses?').toLowerCase();
-//   if (glasses === 'yes' || glasses === 'y') {
-//     //console.log('Correct I am a nerd');
-//     alert('Correct I am a nerd');
-//     num++;
-//   }
-//   else if (glasses === 'no' || glasses === 'n') {
-//     //console.log('You are so wrong I am blind as hell boi');
-//     alert('You are so wrong I am blind as hell boi');
-//   }
-//   else {
-//     alert('Please take this quiz srs, or i will execute this connection');
-//     //console.log('Please take this quiz srs, or i will execute this connection');
-//   }
-// }
-
-// function func5() {
-//   let hair = prompt('What color hair do I have? is it brown?(Y/n)').toLowerCase();
-//   if (hair === 'yes' || hair === 'y') {
-//     //console.log('Thats right my hair is the colour brown!');
-//     alert('Thats right my hair is the colour brown!');
-//     num++;
-//   }
-//   else if (hair === 'no' || hair === 'n') {
-//     alert('No silly, my hairs the colour brown!');
-//     //console.log('No silly, my hairs the colour brown!');
-//   }
-//   else if (hair === 'blond') {
-//     //console.log('Its not blond, its brown wow!');
-//     alert('Its not blond, its brown wow!');
-//   }
-//   else {
-//     //console.log('Thats it, we are done');
-//     alert('Thats it, we are done');
-//   }
-// }
-
-let questions = ['Do I live in Seattle?', 'Is my dogs name Hugo?', 'Is there a raccoon in my backyard I feed fried bread?', 'Does jackson wear glasses?','What color hair do I have? is it brown? '];
-let answers = ['y','y','n','y','y'];
+let questions = ['Do I live in Seattle?', 'Is my dogs name Hugo?', 'Is there a raccoon in my backyard I feed fried bread?', 'Does jackson wear glasses?', 'What color hair do I have? is it brown? '];
+let answers = ['y', 'y', 'n', 'y', 'y'];
 let outcome = ['Yes, you got it right!', 'Nope, you are wrong', 'Please type yes or no! You\'ll be given another chance.'];
 
-function yesno(){
-  for(let z = 0; z <= 4; z++)
-  {
+function yesno() {
+  for (let z = 0; z <= 4; z++) {
     let input = prompt(questions[z]);
     let firstLetter = input.charAt(0);
-    if(firstLetter.toLowerCase() === answers[z]){
+    if (firstLetter.toLowerCase() === answers[z]) {
       alert(outcome[0]);
       num++;
     }
-    else if(firstLetter !== 'y' && firstLetter !== 'n'){
+    else if (firstLetter !== 'y' && firstLetter !== 'n') {
       alert(outcome[2]);
     }
     else {
@@ -128,10 +29,10 @@ function yesno(){
 yesno();
 
 function func6() {
-  let secret = Math.floor(Math.random() * 25);
+  let secret = Math.floor(Math.random() * 15);
   let attempts = 4;
   while (attempts) {
-    let input1 = prompt('What number am I thinking off. ( Hint, its between 0 and 25)');
+    let input1 = prompt('What number am I thinking off. ( Hint, its between 0 and 15)');
     let guess = parseInt(input1);
     attempts--;
     alert(`You have ${attempts} attemps remaining!`);

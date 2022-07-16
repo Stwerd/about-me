@@ -1,11 +1,13 @@
 body {
   background-color: #EDC79B;
-  height: 1400px;
+  height: 1100px;
 }
-img{
+
+img {
   max-width: 20%;
-  float:right;
+  float: right;
 }
+
 h1 {
   font-size: 3rem;
   position: relative;
@@ -28,6 +30,8 @@ h2 {
   font-size: 40px;
   color: #713E5A;
   background-color: #63A375;
+  position:relative;
+  bottom:0px;
 }
 
 h3 {
@@ -38,7 +42,8 @@ h3 {
 .Bio {
   width: 1000px;
   height: 600px;
-
+  top:100px;
+  margin-right:20%;
 }
 
 .row {
@@ -63,4 +68,9 @@ h3 {
   font-weight: 700;
   font-size: 50px;
   flex: auto;
+}
+
+header {
+  position: static;
+  font-size: 5rem;
 }
